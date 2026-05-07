@@ -1,11 +1,9 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+
     background: linear-gradient(to bottom, #0f0c29, #1a103d, #090814);
+
     color: white;
     text-align: center;
 }
@@ -13,9 +11,13 @@ body {
 /* HEADER */
 header {
     padding: 70px 20px;
+
     background: rgba(20, 20, 40, 0.7);
+
     backdrop-filter: blur(10px);
+
     border-bottom: 1px solid rgba(168, 85, 247, 0.3);
+
     box-shadow: 0 0 25px rgba(168, 85, 247, 0.25);
 }
 
@@ -23,35 +25,24 @@ header {
 .profile-img {
     width: clamp(120px, 15vw, 180px);
     height: clamp(120px, 15vw, 180px);
+
     border-radius: 50%;
     object-fit: cover;
+
     border: 3px solid #a855f7;
-    box-shadow: 0 0 25px rgba(168, 85, 247, 0.5),
-                0 0 60px rgba(168, 85, 247, 0.2);
+
+    box-shadow:
+        0 0 25px rgba(168, 85, 247, 0.5),
+        0 0 60px rgba(168, 85, 247, 0.2);
+
     margin-bottom: 15px;
+
     transition: 0.3s;
 }
 
-/* hover (desktop only) */
-@media (hover: hover) {
-    .profile-img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 35px rgba(192, 132, 252, 0.8),
-                    0 0 80px rgba(168, 85, 247, 0.4);
-    }
-
-    button:hover,
-    .btn-cv:hover {
-        transform: scale(1.05);
-    }
-
-    .about:hover,
-    .skills:hover,
-    .contact:hover,
-    .cv:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0 35px rgba(168, 85, 247, 0.3);
-    }
+/* hover */
+.profile-img:hover {
+    transform: scale(1.05);
 }
 
 /* TEXT */
@@ -77,14 +68,30 @@ section {
 .contact,
 .cv {
     background: rgba(17, 24, 39, 0.75);
+
     margin: 25px auto;
+
     width: 80%;
+
     border-radius: 18px;
+
     border: 1px solid rgba(168, 85, 247, 0.25);
+
     backdrop-filter: blur(12px);
+
     box-shadow: 0 0 25px rgba(168, 85, 247, 0.15);
+
     transition: 0.3s;
+
     padding: 40px;
+}
+
+/* hover cards */
+.about:hover,
+.skills:hover,
+.contact:hover,
+.cv:hover {
+    transform: translateY(-5px);
 }
 
 /* SKILLS */
@@ -98,35 +105,54 @@ li {
     color: #ddd6fe;
 }
 
-/* BUTTONS */
-button {
-    padding: 12px 24px;
+/* ===================== */
+/* 🔥 SMALL BUTTONS FIX */
+/* ===================== */
+
+button,
+.btn-cv {
+    width: auto;
+    min-width: 120px;
+    height: 36px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 14px;
+
     border: none;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #7e22ce, #a855f7);
-    color: white;
-    font-size: 16px;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: bold;
+
     cursor: pointer;
+
     transition: 0.3s;
-    box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
-    max-width: 100%;
+
+    text-decoration: none;
+
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
 }
 
-/* CV BUTTON */
+/* colors */
+button {
+    background: linear-gradient(135deg, #7e22ce, #a855f7);
+    color: white;
+}
+
 .btn-cv {
-    display: inline-block;
-    margin-top: 12px;
-    padding: 12px 24px;
-    border-radius: 12px;
     background: linear-gradient(135deg, #28a745, #34d058);
     color: white;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 0 15px rgba(40, 167, 69, 0.4);
-    max-width: 100%;
+}
+
+/* hover (desktop only) */
+@media (hover: hover) {
+    button:hover,
+    .btn-cv:hover {
+        transform: scale(1.05);
+    }
 }
 
 /* MESSAGE */
@@ -139,8 +165,11 @@ button {
 footer {
     padding: 20px;
     margin-top: 30px;
+
     background: rgba(20, 20, 40, 0.8);
+
     border-top: 1px solid rgba(168, 85, 247, 0.3);
+
     color: #c4b5fd;
 }
 
@@ -160,7 +189,8 @@ footer {
 
     button,
     .btn-cv {
-        width: 100%;
-        font-size: 18px;
+        font-size: 14px;
+        min-width: 110px;
+        height: 34px;
     }
 }
