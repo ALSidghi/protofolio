@@ -1,55 +1,162 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0f172a;
+
+    background: linear-gradient(to bottom, #0f0c29, #1a103d, #090814);
+
     color: white;
     text-align: center;
 }
 
+
+/* HEADER */
+
 header {
-    padding: 50px;
-    background: #1e293b;
+    padding: 70px 20px;
+
+    background: rgba(20, 20, 40, 0.7);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(168, 85, 247, 0.3);
+
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.25);
 }
+
 
 h1 {
     margin: 0;
-    font-size: 40px;
+
+    font-size: 45px;
+
+    color: #d8b4fe;
+
+    text-shadow: 0 0 15px #a855f7;
 }
+
+
+header p {
+    color: #c4b5fd;
+
+    margin-top: 10px;
+
+    font-size: 18px;
+}
+
+
+/* SECTIONS */
 
 section {
     padding: 40px;
 }
 
-.about, .skills, .contact {
-    background: #111827;
-    margin: 20px;
-    border-radius: 10px;
+
+.about,
+.skills,
+.contact {
+
+    background: rgba(17, 24, 39, 0.75);
+
+    margin: 25px auto;
+
+    width: 80%;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(168, 85, 247, 0.25);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 0 15px rgba(168, 85, 247, 0.15),
+        0 0 35px rgba(168, 85, 247, 0.08);
+
+    transition: 0.3s;
 }
+
+
+.about:hover,
+.skills:hover,
+.contact:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 20px rgba(168, 85, 247, 0.35),
+        0 0 45px rgba(168, 85, 247, 0.2);
+}
+
+
+h2 {
+    color: #d8b4fe;
+
+    text-shadow: 0 0 10px #9333ea;
+}
+
+
+/* LIST */
 
 ul {
     list-style: none;
+
     padding: 0;
 }
 
+
 li {
-    padding: 5px;
+    padding: 10px;
+
+    color: #ddd6fe;
 }
+
+
+/* BUTTON */
 
 button {
-    padding: 10px 20px;
+
+    padding: 12px 24px;
+
     border: none;
-    background: #3b82f6;
+
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #7e22ce, #a855f7);
+
     color: white;
+
+    font-size: 16px;
+
     cursor: pointer;
-    border-radius: 5px;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 0 15px rgba(168, 85, 247, 0.4);
 }
+
 
 button:hover {
-    background: #2563eb;
+
+    transform: scale(1.05);
+
+    background: linear-gradient(135deg, #9333ea, #c084fc);
+
+    box-shadow:
+        0 0 25px rgba(192, 132, 252, 0.7);
 }
 
+
+/* FOOTER */
+
 footer {
+
     padding: 20px;
-    background: #1e293b;
+
     margin-top: 30px;
+
+    background: rgba(20, 20, 40, 0.8);
+
+    border-top: 1px solid rgba(168, 85, 247, 0.3);
+
+    color: #c4b5fd;
 }
